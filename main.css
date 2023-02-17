@@ -1,0 +1,117 @@
+@font-face {
+    font-family: maFont;
+    src: url(./NotoSansSymbols2-Regular.ttf) format('truetype');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 100;
+
+    --fullW : 100vw;
+    --middleW : 50vw;
+    
+    --bgColorOne : rgb(49, 49, 49);
+    --bgColorTwo : rgb(20, 20, 20);
+    --marginValue : calc(100vh / 22);
+    --bgColorThree : rgb(255, 255, 255);
+}
+
+body {
+    background-image: repeating-linear-gradient(0deg, rgb(48, 48, 48) 1%, rgb(22, 22, 22) 5%);
+    width: 100vw;
+    height: 100vh;
+}
+.containerBG {
+    width: 90vh;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: var(--bgColorTwo);
+    background: repeating-linear-gradient(90deg, rgb(48, 48, 48) 1%, rgb(22, 22, 22) 1.9%);
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 22px 0 52px black;
+    /* border: 2px dotted gray; */
+}
+.divCreate {
+    transition: 1s;
+    /* background: var(--bgColorOne); */
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-family: maFont;
+    /* border: .5px solid white; */
+
+}
+.divCreate div {
+    display: block;
+    margin: auto;
+    pointer-events: none;
+    font-size: 1.3rem;
+    transition: .5s ease-out;
+
+}
+
+.divCreate:hover {
+    /* border: 1px solid red; */
+    transition: .4s;
+    filter: brightness(160%) drop-shadow(0px 0px 10px rgb(98, 255, 0));
+
+}
+.scorePanel {
+    width: 33vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    right:0;
+    background: repeating-linear-gradient(45deg, rgb(48, 48, 48) 0%, rgb(22, 22, 22) 10%);
+    /* backdrop-filter: blur(5px) invert(70%); */
+    display: flex;
+    flex-direction: column;
+    box-shadow: -22px 0 102px black;
+
+}
+.giveALetter {
+    margin: auto;
+    padding: 1rem;
+    background: rgb(62, 62, 62);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .5s ease-out;
+
+}
+.giveALetter:hover {
+    background: yellowgreen;
+}
+.containerOfScore {
+    width: 100%;
+    height: 80vh;
+    /* background: rgba(20, 20, 20, 0.281); */
+    box-shadow: 0 -20px 30px black;
+    display: flex;
+    flex-wrap: wrap;
+    background: repeating-linear-gradient(90deg, rgb(48, 48, 48) 0%, rgb(22, 22, 22) 5%);
+
+}
+.containerOfScore div {
+    margin: auto;
+    width: 100%;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+
+}
+.numberOfLetter {
+    font-size: 3rem;
+    font-family: maFont;
+}
+.theScore {
+    width: auto;
+    font-size: 5rem;
+    font-family: maFont;
+}
